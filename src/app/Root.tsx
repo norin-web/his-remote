@@ -24,7 +24,8 @@ export default function Root() {
     getLenis()?.scrollTo(0, { immediate: true });
     window.scrollTo({ top: 0, behavior: "instant" as ScrollBehavior });
     const t = titles[pathname.replace(/\/$/, "")];
-    document.title = t ? `${t} — ${site.brand}` : `${site.brand} — TV remote for iPhone`;
+    // brand first, so a narrow browser tab still shows the app name
+    document.title = t ? `${site.brand} — ${t}` : `${site.brand} — TV remote for iPhone`;
   }, [pathname]);
 
   return (
