@@ -218,6 +218,11 @@ ul, ol { padding: 0; list-style: none; }
 .fcards__row { display: grid; gap: 12px; }
 .fcard__photo { width: 100%; aspect-ratio: 645 / 278; object-fit: cover; object-position: 50% 30%; border-radius: 22px; margin-top: auto; }
 
+.casts { margin-top: auto; padding-top: 24px; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.casts__tile { display: flex; flex-direction: column; gap: 18px; padding: 16px; border-radius: 16px; background: var(--surface-2); color: var(--text-2); }
+.casts__tile--wide { grid-column: 1 / -1; }
+.casts__tile svg { color: var(--accent); }
+.casts__tile b { font-weight: 500; font-size: 15px; }
 .kbd { margin-top: auto; display: grid; gap: 12px; padding-top: 24px; }
 .kbd__field { display: flex; align-items: center; gap: 10px; min-height: 54px; padding: 0 18px; border-radius: 14px; background: var(--surface-2); color: #fff; font-size: 17px; }
 .kbd__field svg { color: var(--muted); }

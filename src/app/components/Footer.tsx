@@ -14,7 +14,7 @@ export default function Footer() {
           Pick up your phone.<br />Turn on the TV.
         </h2>
         <Btn href={app.url} size="md">Download on the App Store</Btn>
-        <p className="muted small">Free on the App Store · iOS {app.minIOS.split(".")[0]}+</p>
+        <p className="muted small">For iPhone · iOS {app.minIOS.split(".")[0]}+</p>
       </Reveal>
 
       <div className="container">

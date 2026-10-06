@@ -1,4 +1,4 @@
-import { app, appFeatures } from "../content/site";
+import { app, appFeatures, specs } from "../content/site";
 import { img } from "../utils/img";
 import Btn from "../components/Btn";
 import Reveal from "../components/Reveal";
@@ -6,19 +6,11 @@ import Split from "../components/Split";
 
 const phones = [
   { src: "/images/phone-discovery.png", alt: "Connect to Your TV screen with the list of TVs found on Wi‑Fi" },
-  { src: "/images/phone-remote.png", alt: "Remote screen with streaming shortcuts, media keys, volume and channels" },
+  { src: "/images/phone-remote.png", alt: "Remote screen with the T‑Pad touchpad, media keys, volume and channels" },
   { src: "/images/phone-cast.png", alt: "Cast screen for sending photos, videos and files to the TV" },
 ];
 
 export default function OurApp() {
-  const specs: [string, string][] = [
-    ["Category", app.category],
-    ["Compatibility", `iPhone · iOS ${app.minIOS} or later`],
-    ["Size", app.size],
-    ["Languages", app.languages],
-    ["Age rating", app.age],
-    ["Price", app.price],
-  ];
   return (
     <>
       <section className="hero hero--page">
@@ -26,7 +18,7 @@ export default function OurApp() {
         <Reveal as="span" className="pill">The app</Reveal>
         <Split as="h1" className="h-page" parts={[["A remote that"], ["\n"], ["lives on your iPhone"]]} />
         <Reveal as="p" className="lead hero__sub" delay={150}>
-          Buttons, touchpad, keyboard and cast — everything your TV remote does, laid out for one thumb.
+          Controller, T‑Pad and Cast — everything your TV remote does, laid out for one thumb.
         </Reveal>
         <Reveal className="hero__cta" delay={220}>
           <Btn href={app.url}>Download on the App Store</Btn>

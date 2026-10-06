@@ -28,11 +28,11 @@ export default function Home() {
         </Reveal>
         <Split as="h1" className="h-hero" parts={[["Your TV,"], ["\n"], ["in your pocket"]]} />
         <Reveal as="p" className="lead hero__sub" delay={150}>
-          Control your Hisense smart TV from iPhone over Wi‑Fi. Volume, channels, apps and typing — no lost remote, no setup.
+          Control your Hisense smart TV from iPhone over Wi‑Fi. Volume, channels, a touchpad and casting — no lost remote, no setup.
         </Reveal>
         <Reveal className="hero__cta" delay={220}>
           <Btn href={app.url}>Download on the App Store</Btn>
-          <span className="muted small">Free on the App Store · iOS {app.minIOS.split(".")[0]}+</span>
+          <span className="muted small">For iPhone · iOS {app.minIOS.split(".")[0]}+</span>
         </Reveal>
       </section>
 
@@ -61,10 +61,10 @@ export default function Home() {
               <div className="fcard__text">
                 <span className="tag">Auto‑discovery</span>
                 <h3 className="h3">Finds your TV<br />on its own</h3>
-                <p className="muted">Open the app on the same Wi‑Fi and your TV shows up in the list. Tap it once — you're connected.</p>
+                <p className="muted">Open the app on the same Wi‑Fi and your TV shows up under Available to Connect. Tap it once — you're connected.</p>
                 <ul className="checks">
-                  <li><Check />No IR blaster, no pairing codes</li>
-                  <li><Check />Remembers every TV in the house</li>
+                  <li><Check />Works over Wi‑Fi — no IR blaster</li>
+                  <li><Check />Switch TVs from the Select TV menu</li>
                 </ul>
               </div>
               <img className="fcard__phone" src={img("/images/phone-discovery.png")} alt="Connect to Your TV screen listing Hisense TVs on the network" loading="lazy" />
@@ -72,32 +72,39 @@ export default function Home() {
 
             <div ref={f2} className="parallax"><Reveal className="fcard fcard--wide fcard--flip card">
               <div className="fcard__text">
-                <span className="tag">Touchpad</span>
+                <span className="tag">T‑Pad</span>
                 <h3 className="h3">Swipe through menus<br />instead of clicking</h3>
-                <p className="muted">Flip to the touchpad and glide across rows of shows with your thumb. Tap anywhere to select.</p>
+                <p className="muted">Switch to the T‑Pad tab and glide across rows of shows with your thumb.</p>
                 <ul className="checks">
-                  <li><Check />Haptic feedback on every move</li>
-                  <li><Check />One‑hand friendly</li>
+                  <li><Check />Media keys stay right below the pad</li>
+                  <li><Check />Back, Home, Exit, volume and channels</li>
                 </ul>
               </div>
-              <img className="fcard__phone" src={img("/images/phone-remote.png")} alt="Remote screen with the touchpad tab open" loading="lazy" />
+              <img className="fcard__phone" src={img("/images/phone-remote.png")} alt="Remote screen with the T‑Pad tab open" loading="lazy" />
             </Reveal></div>
 
             <div className="fcards__row">
               <Reveal className="fcard fcard--small card">
-                <span className="tag">Keyboard</span>
-                <h3 className="h3 h3--sm">Type searches and passwords with your iPhone keyboard</h3>
-                <div className="kbd" aria-hidden="true">
-                  <div className="kbd__field">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round"><circle cx="11" cy="11" r="7" /><path d="M20 20l-4-4" /></svg>
-                    nature documentar<b />
+                <span className="tag">Cast</span>
+                <h3 className="h3 h3--sm">Put your photos and videos on the big screen</h3>
+                <div className="casts" aria-hidden="true">
+                  <div className="casts__tile casts__tile--wide">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round"><rect x="3" y="4" width="18" height="16" rx="3" /><circle cx="9" cy="10" r="1.6" /><path d="M21 16l-5-5-8 9" strokeLinecap="round" /></svg>
+                    <b>Image/Photo</b>
                   </div>
-                  <div className="kbd__keys">{Array.from({ length: 7 }, (_, i) => <span key={i} />)}</div>
+                  <div className="casts__tile">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round"><rect x="3" y="5" width="18" height="14" rx="3" /><path d="M10 9.5v5l4-2.5z" fill="currentColor" /></svg>
+                    <b>Video</b>
+                  </div>
+                  <div className="casts__tile">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /></svg>
+                    <b>Files</b>
+                  </div>
                 </div>
               </Reveal>
               <Reveal className="fcard fcard--small fcard--grow card" delay={120}>
-                <span className="tag">App launcher</span>
-                <h3 className="h3 h3--sm">Open streaming apps<br />straight from your phone</h3>
+                <span className="tag">Shortcuts</span>
+                <h3 className="h3 h3--sm">Netflix, Sling and YouTube<br />one tap away</h3>
                 <img className="fcard__photo" src={img("/images/living-room.jpg")} alt="A smart TV in a dark living room showing a row of streaming apps" loading="lazy" />
               </Reveal>
             </div>

@@ -6,7 +6,7 @@ import Split from "../components/Split";
 const principles = [
   ["01", "Simple first", "Open, tap, watch. No tutorials needed."],
   ["02", "Local by design", "Commands travel over your home Wi‑Fi, phone to TV."],
-  ["03", "Built to last", "Regular updates as TVs and iOS change."],
+  ["03", "Made for Hisense", "Built around Hisense smart TVs and the buttons you already know."],
 ];
 
 export default function About() {
@@ -18,7 +18,7 @@ export default function About() {
           <Reveal as="span" className="pill">About</Reveal>
           <Split as="h1" className="h-page" parts={[["We built the remote"], ["\n"], ["we kept wishing we had"]]} />
           <Reveal as="p" className="lead about__sub" delay={150}>
-            {site.brand} started on a couch, with a lost remote and a phone in hand. It's a small, focused app made by a small team.
+            {site.brand} started on a couch, with a lost remote and a phone in hand. It's a small, focused app for Hisense smart TVs.
           </Reveal>
         </div>
       </section>
