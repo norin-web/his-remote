@@ -4,10 +4,9 @@ import tailwindcss from "@tailwindcss/vite";
 import react from "@vitejs/plugin-react";
 
 export default defineConfig({
-  // GitHub Pages without a domain: norin-web.github.io/his-remote/.
-  // With a custom domain switch to "/" and add public/CNAME in the same commit,
-  // otherwise the page requests /his-remote/assets and renders blank.
-  base: "/his-remote/",
+  // Custom domain vikskendapa.site (public/CNAME) → served from the root.
+  // If the domain is ever removed, switch back to "/his-remote/" or every asset 404s.
+  base: "/",
   plugins: [react(), tailwindcss()],
   resolve: { alias: { "@": path.resolve(__dirname, "./src") } },
 });
