@@ -6,7 +6,9 @@ export const site = {
   brand: "Hisense · TV Remote Control",
   email: "tomislav@vikskendapa.store",
   year: new Date().getFullYear(),
-  disclaimer: "TV remote for iPhone. Independent app, not affiliated with Hisense.",
+  operator: "VIK SKENDAPA d.o.o.",
+  // wording follows section 2 of the owner's Privacy Policy / Terms
+  disclaimer: "TV remote for iPhone by VIK SKENDAPA d.o.o. HISENSE is a trademark of Hisense Co., Ltd., used under written authorization.",
 };
 
 export const app = {
@@ -69,5 +71,7 @@ export const faq = [
   { q: "Can I control more than one TV?", a: "Yes. Every Hisense TV found on your network is listed — switch between them from the Select TV menu at the top of the remote." },
   { q: "How do I use the touchpad?", a: "Open the T‑Pad tab and swipe on the pad to move through menus. Media, Back, Home, Exit, volume and channel keys stay right below it." },
   { q: "How do I cast photos or videos?", a: "Open the Cast tab and choose Image/Photo, Video or Files. Your iPhone and TV need to be on the same Wi‑Fi network." },
+  { q: "How do I cancel my subscription?", a: "Subscriptions are billed through your Apple ID. Manage or cancel them in your iPhone's Settings → your name → Subscriptions. Deleting the app doesn't cancel an active subscription." },
+  { q: "How do I restore a purchase?", a: "Previous purchases can be restored in the app with the same Apple ID they were made with. Refunds and billing are handled by Apple." },
   { q: "Does the TV need to be on?", a: "Yes — the app talks to the TV over Wi‑Fi, so the TV has to be powered on and connected to the network." },
 ];
