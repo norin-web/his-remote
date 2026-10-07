@@ -4,8 +4,8 @@ import { img } from "../utils/img";
 import Btn from "./Btn";
 import Reveal from "./Reveal";
 
-// Pages that already end on a contact block skip the big download CTA.
-const NO_CTA = ["/contact", "/feedback", "/support"];
+// Contact, Support and the legal pages skip the big download CTA above the footer.
+const NO_CTA = ["/contact", "/feedback", "/support", "/privacy", "/terms"];
 
 export default function Footer() {
   const { pathname } = useLocation();

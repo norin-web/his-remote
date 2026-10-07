@@ -371,7 +371,7 @@ ul, ol { padding: 0; list-style: none; }
 .legal2__grid { display: grid; gap: 32px; }
 .legal2__toc { display: none; }
 .legal2__body { min-width: 0; max-width: 820px; font-size: 17px; line-height: 1.65; color: #b5b5b5; display: grid; gap: 40px; }
-.legal2__body a { color: var(--text-2); text-decoration: underline; text-underline-offset: 3px; }
+.legal2__body a:not(.btn) { color: var(--text-2); text-decoration: underline; text-underline-offset: 3px; }
 .legal2__intro { margin-bottom: -16px; }
 @media (min-width: 1000px) {
   .legal2 { padding-top: 80px; }
