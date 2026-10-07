@@ -375,16 +375,20 @@ ul, ol { padding: 0; list-style: none; }
 .legal2__intro { margin-bottom: -16px; }
 @media (min-width: 1000px) {
   .legal2 { padding-top: 80px; }
-  .legal2__grid { grid-template-columns: 120px 1fr; gap: 80px; }
-  .legal2__toc { display: block; position: sticky; top: 120px; align-self: start; }
+  .legal2__grid { grid-template-columns: 240px 1fr; gap: 64px; }
+  .legal2__toc { display: block; position: sticky; top: 120px; align-self: start; max-height: calc(100vh - 160px); overflow-y: auto; scrollbar-width: none; }
+  .legal2__toc::-webkit-scrollbar { display: none; }
   .legal2__toc .eyebrow { display: none; }
-  .legal2__toc ol { display: grid; gap: 6px; }
-  .legal2__toc button { display: flex; align-items: center; gap: 10px; padding: 6px 0; font-size: 14px; color: var(--muted); }
-  .legal2__toc button b { font-weight: 500; font-variant-numeric: tabular-nums; }
-  .legal2__toc button i { display: block; width: 16px; height: 2px; background: #333; transition: width .3s, background .3s; }
+  .legal2__toc ol { display: grid; gap: 2px; }
+  /* number · dash · short title; long titles end in an ellipsis, full text in the title attribute */
+  .legal2__toc button { width: 100%; display: flex; align-items: center; gap: 10px; padding: 6px 0; font-size: 14px; text-align: left; color: var(--muted); transition: color .25s; }
+  .legal2__toc button:hover { color: var(--text-2); }
+  .legal2__toc button b { flex-shrink: 0; width: 20px; font-weight: 500; font-variant-numeric: tabular-nums; }
+  .legal2__toc button i { flex-shrink: 0; display: block; width: 12px; height: 2px; background: #333; transition: width .3s, background .3s; }
+  .legal2__toc button span { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
   .legal2__toc button.is-on { color: #fff; }
   .legal2__toc button.is-on b { font-weight: 600; }
-  .legal2__toc button.is-on i { width: 32px; background: var(--accent); }
+  .legal2__toc button.is-on i { width: 24px; background: var(--accent); }
 }
 .glance { display: grid; gap: 16px; }
 .glance .eyebrow { font-family: var(--display); font-size: 28px; font-weight: 500; color: #fff; }

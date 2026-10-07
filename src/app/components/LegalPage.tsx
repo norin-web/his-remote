@@ -118,6 +118,7 @@ export default function LegalPage({ doc }: { doc: Doc }) {
                   >
                     <b>{String(i + 1).padStart(2, "0")}</b>
                     <i aria-hidden="true" />
+                    <span>{s.title}</span>
                   </button>
                 </li>
               ))}
